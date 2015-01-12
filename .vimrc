@@ -12,27 +12,28 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
-"NerdTree stuff
-map <C-n> :NERDTreeToggle<CR>
+"ctrlp
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
 
-" PyMatcher for CtrlP
+"ag
+"ag seems to need -U at the moment, think this is a bug
+if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -U -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+endif
+let g:ag_prg="ag --vimgrep -U"
+
+"pymatcher
 if !has('python')
     echo 'In order to use pymatcher plugin, you need +python compiled vim'
 else
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
 
-"ctrlp
-let g:ctrlp_lazy_update = 100
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_files = 0
-if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -u -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-endif
-
-"Ag
-let g:agprg="ag -U"
+"nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 "display
 syntax enable

@@ -75,9 +75,10 @@ set writebackup
 autocmd! bufwritepost .vimrc source %
 
 "relative line numbers
-set relativenumber
-autocmd InsertEnter * :set number norelativenumber
-autocmd InsertLeave * :set nonumber relativenumber
+if exists('+relativenumber')
+    set relativenumber
+    set number
+endif
 
 "diable arrow keys, urgh..
 noremap <Up> <NOP>
@@ -96,3 +97,7 @@ let mapleader=" "
 
 "map bclose
 nnoremap <silent> <Leader>c :Bclose<CR>
+
+"easier switching to previous buffer
+nnoremap <silent> <Leader>[ :bp<CR>
+nnoremap <silent> <Leader>] :bn<CR>

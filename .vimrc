@@ -90,3 +90,9 @@ set hidden "allow hidden modified buffers
 
 "mouse (for now)
 set mouse=a
+
+"leader
+let mapleader=" "
+
+"map bclose
+nnoremap <silent> <Leader>c :Bclose<CR>

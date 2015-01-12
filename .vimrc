@@ -33,7 +33,7 @@ else
 endif
 
 "nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map § :NERDTreeToggle<CR>
 
 "display
 syntax enable
@@ -87,3 +87,6 @@ noremap <Right> <NOP>
 
 "buffer stuff
 set hidden "allow hidden modified buffers
+
+"mouse (for now)
+set mouse=a

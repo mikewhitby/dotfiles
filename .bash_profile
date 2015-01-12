@@ -9,7 +9,6 @@ export HISTCONTROL=ignorespace
 # Generic aliases
 alias ll="ls -l"
 alias grep="ggrep"
-alias ag="ag -U"
 
 # Bash autocomplete
 if [ -f $(brew --prefix)/etc/bash_completion ]; then

@@ -22,18 +22,13 @@ let g:ctrlp_max_files = 0
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -U -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+    let g:ag_prg="ag --vimgrep -U"
 endif
-let g:ag_prg="ag --vimgrep -U"
 
 "pymatcher
-if !has('python')
-    echo 'In order to use pymatcher plugin, you need +python compiled vim'
-else
+if has('python')
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
-
-"nerdtree
-map § :NERDTreeToggle<CR>
 
 "display
 syntax enable
@@ -80,12 +75,6 @@ if exists('+relativenumber')
     set number
 endif
 
-"diable arrow keys, urgh..
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 "buffer stuff
 set hidden "allow hidden modified buffers
 
@@ -95,9 +84,12 @@ set mouse=a
 "leader
 let mapleader=" "
 
-"map bclose
-nnoremap <silent> <Leader>c :Bclose<CR>
-
-"easier switching to previous buffer
+"key mappings
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>
+nnoremap <silent> <Leader>c :Bclose<CR>
+nnoremap § :NERDTreeToggle<CR>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>

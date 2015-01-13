@@ -89,6 +89,9 @@ set hidden "allow hidden modified buffers
 "mouse (for now)
 set mouse=a
 
+"file types
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 "----------------- KEY MAPPINGS -----------------
 
 let mapleader=" "

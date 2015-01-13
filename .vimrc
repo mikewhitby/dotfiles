@@ -16,11 +16,9 @@ filetype plugin indent on
 "----------------- SETTINGS -----------------
 
 "ctrlp
-if exists(':CtrlP')
-    let g:ctrlp_lazy_update = 100
-    let g:ctrlp_clear_cache_on_exit = 0
-    let g:ctrlp_max_files = 0
-endif
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
 
 "ag
 "ag seems to need -U at the moment, think this is a bug
@@ -98,9 +96,7 @@ let mapleader=" "
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>
 nnoremap <silent> <Leader>c :Bclose<CR>
-if exists(':NERDTreeToggle')
-    nnoremap § :NERDTreeToggle<CR>
-endif
+nnoremap § :NERDTreeToggle<CR>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>

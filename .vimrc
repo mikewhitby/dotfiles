@@ -47,7 +47,8 @@ set ruler
 set laststatus=2
 set wildmenu
 set wildmode=list:longest
-set scrolloff=6
+set scrolloff=10
+set nowrap
 
 "search
 set hlsearch "highlight search matches

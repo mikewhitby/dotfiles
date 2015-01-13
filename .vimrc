@@ -1,4 +1,5 @@
-"vundle
+"----------------- PLUGINS -----------------
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -12,17 +13,25 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
+"----------------- SETTINGS -----------------
+
 "ctrlp
-let g:ctrlp_lazy_update = 100
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_files = 0
+if exists(':CtrlP')
+    let g:ctrlp_lazy_update = 100
+    let g:ctrlp_clear_cache_on_exit = 0
+    let g:ctrlp_max_files = 0
+endif
 
 "ag
 "ag seems to need -U at the moment, think this is a bug
-if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -U -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-    let g:ag_prg="ag --vimgrep -U"
+if executable('ag')
+    set grepprg=ag\ -U\ --nogroup\ --nocolor
+    if exists(':Ag')
+        let g:ag_prg="ag --vimgrep -U"
+    endif
+    if exists(':CtrlP')
+        let g:ctrlp_user_command = 'ag %s -U -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+    endif
 endif
 
 "pymatcher
@@ -43,8 +52,6 @@ set scrolloff=6
 "search
 set hlsearch "highlight search matches
 set incsearch "show search as you type
-nnoremap / /\v
-vnoremap / /\v
 set gdefault "global pattern by default
 set ignorecase
 
@@ -66,7 +73,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim/backup,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-"vimrc reload
+"vimrc auto reload
 autocmd! bufwritepost .vimrc source %
 
 "relative line numbers
@@ -81,15 +88,18 @@ set hidden "allow hidden modified buffers
 "mouse (for now)
 set mouse=a
 
-"leader
-let mapleader=" "
+"----------------- KEY MAPPINGS -----------------
 
-"key mappings
+let mapleader=" "
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>
 nnoremap <silent> <Leader>c :Bclose<CR>
-nnoremap § :NERDTreeToggle<CR>
+if exists(':NERDTreeToggle')
+    nnoremap § :NERDTreeToggle<CR>
+endif
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+nnoremap / /\v
+vnoremap / /\v

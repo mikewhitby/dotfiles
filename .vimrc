@@ -23,12 +23,12 @@ let g:ctrlp_max_files = 0
 "ag
 "ag seems to need -U at the moment, think this is a bug
 if executable('ag')
-    set grepprg=ag\ -U\ --nogroup\ --nocolor
+    set grepprg=ag\ --nogroup\ --nocolor
     if exists(':Ag')
-        let g:ag_prg="ag --vimgrep -U"
+        let g:ag_prg="ag --vimgrep"
     endif
     if exists(':CtrlP')
-        let g:ctrlp_user_command = 'ag %s -U -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+        let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
     endif
 endif
 
@@ -64,13 +64,16 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
+set softtabstop=4
 
-"backup / swap files
+"backup / swap / undo
 set backup
 set backupdir=~/.vim/backup,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim/backup,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+set undofile
+set undodir=~/.vim/undo,~/.tmp,~/tmp,/var/tmp,/tmp
 
 "vimrc auto reload
 autocmd! bufwritepost .vimrc source %

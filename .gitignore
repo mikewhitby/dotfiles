@@ -7,4 +7,5 @@
 /.vim/.netrwhist
 /.vim/bundle/*
 /.vim/backup/*
+/.vim/undo/*
 !/.bash_profile

@@ -55,7 +55,8 @@ set list listchars=tab:\ \ ,trail:·
 set hlsearch "highlight search matches
 set incsearch "show search as you type
 set gdefault "global pattern by default
-set ignorecase
+set ignorecase "case insensitive search
+set smartcase " ..unless the string has uppercase in it
 
 "editing
 set showmatch "briefly flash to matching brace when inserted

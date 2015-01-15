@@ -9,3 +9,5 @@
 /.vim/backup/*
 /.vim/undo/*
 !/.bash_profile
+!/.gitconfig
+!/.gitignore-global

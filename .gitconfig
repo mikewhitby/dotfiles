@@ -1,0 +1,12 @@
+[user]
+    name = Mike Whitby
+    email = mwhitby@de-facto.com
+[core]
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore-global
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+[push]
+    default = simple

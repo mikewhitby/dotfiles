@@ -67,11 +67,9 @@ set backspace=indent,eol,start
 set softtabstop=4
 
 "backup / swap / undo
-set backup
-set backupdir=~/.vim/backup,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim/backup,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
+set noswapfile
+set nobackup
+set nowb
 set undofile
 set undodir=~/.vim/undo,~/.tmp,~/tmp,/var/tmp,/tmp
 

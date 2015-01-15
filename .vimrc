@@ -44,7 +44,7 @@ set cursorline
 set ruler
 set laststatus=2
 set wildmenu
-set wildmode=list:longest
+set wildmode=full
 set scrolloff=10
 set nowrap
 

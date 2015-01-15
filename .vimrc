@@ -48,6 +48,8 @@ set wildmenu
 set wildmode=full
 set scrolloff=10
 set nowrap
+" show trailing tabs and spaces
+set list listchars=tab:\ \ ,trail:·
 
 "search
 set hlsearch "highlight search matches

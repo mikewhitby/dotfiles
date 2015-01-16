@@ -86,6 +86,9 @@ if exists('+relativenumber')
     set number
 endif
 
+"clipboard
+set clipboard=unnamed
+
 "buffer stuff
 set hidden "allow hidden modified buffers
 

@@ -72,6 +72,7 @@ set gcr=a:blinkon0                                  " disable cusor blink
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
 set autoread                                        " automatically re-read changed files
+set showcmd                                         " show visual selection info as we go
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=","

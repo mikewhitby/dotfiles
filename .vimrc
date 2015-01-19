@@ -15,6 +15,7 @@ filetype plugin indent on
 
 "----------------- SETTINGS -----------------
 set encoding=utf-8                                  " use utf-8 encoding
+set fileformats=unix,dos                            " use unix line endings
 let g:ctrlp_lazy_update = 100                       " allow 100 msec before updating results
 let g:ctrlp_use_caching = 1                         " allow the use of a cache file
 let g:ctrlp_clear_cache_on_exit = 0                 " don't clear the cache on exit
@@ -74,7 +75,10 @@ set gcr=a:blinkon0                                  " disable cusor blink
 :autocmd InsertLeave * set nocul
 set autoread                                        " automatically re-read changed files
 set showcmd                                         " show visual selection info as we go
-set guioptions=                                     " remove all menubars etc
+if has('gui_running')
+    set guioptions=                                 " remove all menubars etc
+    set guifont=ProggyClean,Courier\ New:h9         " set font
+endif
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=" "

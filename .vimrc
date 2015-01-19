@@ -37,7 +37,7 @@ set wildmode=full                                   " ...and have it show all re
 set scrolloff=10                                    " ensure 10 lines are shown above/below the current line
 set nowrap                                          " disable text wrapping
 " show trailing tabs and spaces
-set list listchars=tab:>-,trail:·
+set list listchars=tab:>-,trail:.
 set hlsearch                                        " highlight search matches
 set incsearch                                       " show search as you type
 set gdefault                                        " global pattern by default

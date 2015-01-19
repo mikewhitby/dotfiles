@@ -67,8 +67,7 @@ set mouse=a                                         " allow using the mouse
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "----------------- KEY MAPPINGS -----------------
-" make leader as space
-let mapleader=" "
+let mapleader=","
 " buffers - previous, next, close, new
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>

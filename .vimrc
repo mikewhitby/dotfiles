@@ -75,7 +75,7 @@ set autoread                                        " automatically re-read chan
 set showcmd                                         " show visual selection info as we go
 
 "----------------- KEY MAPPINGS -----------------
-let mapleader=","
+let mapleader=" "
 " buffers - previous, next, close, new
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>

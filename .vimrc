@@ -98,14 +98,19 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "----------------- KEY MAPPINGS -----------------
 
+" make leader as space
 let mapleader=" "
+" buffers - previous, next, close, new
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>
 nnoremap <silent> <Leader>c :Bclose<CR>
+nnoremap <silent> <Leader>n :enew<CR>
+" open NERDTree
 nnoremap § :NERDTreeToggle<CR>
+" disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+" make search regex by default
 nnoremap / /\v
-vnoremap / /\v

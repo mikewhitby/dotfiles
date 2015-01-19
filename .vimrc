@@ -71,6 +71,7 @@ set gcr=a:blinkon0                                  " disable cusor blink
 " show the cursor line only when in insert modedddd
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
+set autoread                                        " automatically re-read changed files
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=","

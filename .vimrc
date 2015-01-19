@@ -28,7 +28,6 @@ if has('python')
 endif
 syntax enable                                       " enable syntax highlighting
 colorscheme monokai                                 " use the monokai colourscheme
-set cursorline                                      " highlight the line the cursor is on
 set ruler                                           " show the line number ruler
 set laststatus=2                                    " always show the statusbar
 set wildmenu                                        " use the tab-completion wildmenu...
@@ -65,6 +64,13 @@ set hidden                                          " allow hidden modified buff
 set mouse=a                                         " allow using the mouse
 " class *.md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+set history=1000                                    " remember the last 1000 commands
+set title                                           " make terminal vim set the title
+set visualbell                                      " don't bloody beep
+set gcr=a:blinkon0                                  " disable cusor blink
+" show the cursor line only when in insert modedddd
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=","

@@ -1,5 +1,4 @@
 "----------------- PLUGINS -----------------
-
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,95 +14,66 @@ call vundle#end()
 filetype plugin indent on
 
 "----------------- SETTINGS -----------------
-
-"ctrlp
-let g:ctrlp_lazy_update = 100
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_max_files = 0
-
-"ag
-"ag seems to need -U at the moment, think this is a bug
+let g:ctrlp_lazy_update = 100                       " allow 100 msec before updating results
+let g:ctrlp_use_caching = 1                         " allow the use of a cache file
+let g:ctrlp_clear_cache_on_exit = 0                 " don't clear the cache on exit
+let g:ctrlp_max_files = 0                           " no limit on max amount of files
+" use ag as a CtrlP indexer
 if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-    if exists(':Ag')
-        let g:ag_prg="ag --vimgrep"
-    endif
-    if exists(':CtrlP')
-        let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-    endif
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
 endif
-
-"pymatcher
+" Use pymatcher as a CtrlP matcher
 if has('python')
     let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
-
-"display
-syntax enable
-colorscheme monokai
-set cursorline
-set ruler
-set laststatus=2
-set wildmenu
-set wildmode=full
-set scrolloff=10
-set nowrap
+syntax enable                                       " enable syntax highlighting
+colorscheme monokai                                 " use the monokai colourscheme
+set cursorline                                      " highlight the line the cursor is on
+set ruler                                           " show the line number ruler
+set laststatus=2                                    " always show the statusbar
+set wildmenu                                        " use the tab-completion wildmenu...
+set wildmode=full                                   " ...and have it show all results
+set scrolloff=10                                    " ensure 10 lines are shown above/below the current line
+set nowrap                                          " disable text wrapping
 " show trailing tabs and spaces
 set list listchars=tab:\ \ ,trail:·
-
-"search
-set hlsearch "highlight search matches
-set incsearch "show search as you type
-set gdefault "global pattern by default
-set ignorecase "case insensitive search
-set smartcase " ..unless the string has uppercase in it
-
-"editing
-set showmatch "briefly flash to matching brace when inserted
-
-"indentation
-set autoindent
-set smartindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set backspace=indent,eol,start
-set softtabstop=4
-
-"backup / swap / undo
-set noswapfile
-set nobackup
-set nowb
-set undofile
-set undodir=~/.vim/undo,~/.tmp,~/tmp,/var/tmp,/tmp
-
-"vimrc auto reload
+set hlsearch                                        " highlight search matches
+set incsearch                                       " show search as you type
+set gdefault                                        " global pattern by default
+set ignorecase                                      " case insensitive search
+set smartcase                                       "  ..unless the string has uppercase in it
+set showmatch                                       " briefly flash to matching brace when inserted
+set autoindent                                      " indent the next line the same as the current line...
+set smartindent                                     " ...and alter the indent for control structures etc
+set expandtab                                       " change tabs to spaces
+set tabstop=4                                       " class this many spaces as one tab
+set shiftwidth=4                                    " when altering indent, use this many spaces for one tab
+set backspace=indent,eol,start                      " 'untab' these with backspace
+set softtabstop=4                                   " unsure how this differs to the other tab settings tbh
+set noswapfile                                      " disable swap file
+set nobackup                                        " don't save backup files
+set nowb                                            " don't save a backup before writing
+set undofile                                        " use a persistant undo file...
+set undodir=~/.vim/undo,~/.tmp,~/tmp,/var/tmp,/tmp  " ...which is saved in one of these dirs
+" automatically reload .vimrc on change
 autocmd! bufwritepost .vimrc source %
-
-"relative line numbers
 if exists('+relativenumber')
-    set relativenumber
-    set number
+    set relativenumber                              " use relative numbers...
+    set number                                      " ...and normal numbers (hybrid numbering)
 endif
-
-"buffer stuff
-set hidden "allow hidden modified buffers
-
-"mouse (for now)
-set mouse=a
-
-"file types
+set hidden                                          " allow hidden modified buffers
+set mouse=a                                         " allow using the mouse
+" class *.md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "----------------- KEY MAPPINGS -----------------
-
 " make leader as space
 let mapleader=" "
 " buffers - previous, next, close, new
 nnoremap <silent> <Leader>[ :bp<CR>
 nnoremap <silent> <Leader>] :bn<CR>
 nnoremap <silent> <Leader>c :Bclose<CR>
+nnoremap <silent> <Leader>x :Bclose!<CR>
 nnoremap <silent> <Leader>n :enew<CR>
 " open NERDTree
 nnoremap § :NERDTreeToggle<CR>

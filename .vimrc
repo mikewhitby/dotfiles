@@ -14,6 +14,7 @@ call vundle#end()
 filetype plugin indent on
 
 "----------------- SETTINGS -----------------
+set encoding=utf-8                                  " use utf-8 encoding
 let g:ctrlp_lazy_update = 100                       " allow 100 msec before updating results
 let g:ctrlp_use_caching = 1                         " allow the use of a cache file
 let g:ctrlp_clear_cache_on_exit = 0                 " don't clear the cache on exit
@@ -35,7 +36,7 @@ set wildmode=full                                   " ...and have it show all re
 set scrolloff=10                                    " ensure 10 lines are shown above/below the current line
 set nowrap                                          " disable text wrapping
 " show trailing tabs and spaces
-set list listchars=tab:\ \ ,trail:Â·
+set list listchars=tab:>-,trail:·
 set hlsearch                                        " highlight search matches
 set incsearch                                       " show search as you type
 set gdefault                                        " global pattern by default
@@ -73,6 +74,7 @@ set gcr=a:blinkon0                                  " disable cusor blink
 :autocmd InsertLeave * set nocul
 set autoread                                        " automatically re-read changed files
 set showcmd                                         " show visual selection info as we go
+set guioptions=                                     " remove all menubars etc
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=" "

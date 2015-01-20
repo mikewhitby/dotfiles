@@ -77,7 +77,6 @@ set autoread                                        " automatically re-read chan
 set showcmd                                         " show visual selection info as we go
 if has('gui_running')
     set guioptions=                                 " remove all menubars etc
-    set guifont=ProggyClean,Courier\ New:h9         " set font
 endif
 
 "----------------- KEY MAPPINGS -----------------

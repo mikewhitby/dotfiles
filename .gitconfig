@@ -1,6 +1,6 @@
 [user]
     name = Mike Whitby
-    email = mwhitby@de-facto.com
+    email = m.whitby@gmail.com
 [core]
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore-global

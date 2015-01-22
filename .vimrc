@@ -22,7 +22,8 @@ let g:ctrlp_clear_cache_on_exit = 0                 " don't clear the cache on e
 let g:ctrlp_max_files = 0                           " no limit on max amount of files
 " use ag as a CtrlP indexer
 if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+    let g:ag_prg="ag --vimgrep -u"
+    let g:ctrlp_user_command = 'ag %s -u -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
 endif
 " Use pymatcher as a CtrlP matcher
 if has('python')

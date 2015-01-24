@@ -1,1 +1,0 @@
-../vendor/n98-magerun/autocompletion/bash/bash_complete

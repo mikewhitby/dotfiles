@@ -12,3 +12,5 @@
 !/.gitconfig
 !/.gitignore-global
 !/bin/
+!/vendor/
+!/.n98-magerun/

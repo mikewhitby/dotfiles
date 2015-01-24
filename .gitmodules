@@ -1,0 +1,3 @@
+[submodule "vendor/mpmd"]
+	path = vendor/mpmd
+	url = https://github.com/AOEpeople/mpmd

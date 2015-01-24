@@ -31,6 +31,11 @@ if [ -f ~/bin/git-prompt ]; then
     export PS1='\h \w$(__git_ps1 " (%s)") \$ '
 fi
 
+# Bash completion
+for file in ~/bash_completion.d/*; do
+  source $file
+done
+
 # De facto aliases
 if [ -f ~/.defacto_aliases ]; then
     source ~/.defacto_aliases

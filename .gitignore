@@ -14,3 +14,4 @@
 !/bin/
 !/vendor/
 !/.n98-magerun/
+!/bash_completion/

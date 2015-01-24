@@ -32,7 +32,7 @@ if [ -f ~/bin/git-prompt ]; then
 fi
 
 # Bash completion
-for file in ~/bash_completion.d/*; do
+for file in ~/.bash_completion/*; do
   source $file
 done
 

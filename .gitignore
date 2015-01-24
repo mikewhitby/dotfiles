@@ -1,5 +1,5 @@
 /*
-/*/
+!*.gitkeep
 !/.gitignore
 !/README.md
 !/.vimrc
@@ -15,3 +15,5 @@
 !/.vendor/
 !/.n98-magerun/
 !/.bash_completion/
+!/projects/
+/projects/*

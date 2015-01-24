@@ -11,3 +11,4 @@
 !/.bash_profile
 !/.gitconfig
 !/.gitignore-global
+!/bin/

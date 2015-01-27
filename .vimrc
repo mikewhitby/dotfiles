@@ -69,7 +69,7 @@ endif
 set hidden                                          " allow hidden modified buffers
 set mouse=a                                         " allow using the mouse
 " class *.md as markdown
-autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown
 set history=1000                                    " remember the last 1000 commands
 set title                                           " make terminal vim set the title
 set visualbell                                      " don't bloody beep

@@ -15,7 +15,7 @@ call vundle#end()
 filetype plugin indent on
 
 "----------------- SETTINGS -----------------
-set encoding=utf-8                                  " use utf-8 encoding
+set encoding=utf-8 nobomb                           " use utf-8 encoding
 set fileformats=unix,dos                            " use unix line endings
 let g:ctrlp_lazy_update = 100                       " allow 100 msec before updating results
 let g:ctrlp_use_caching = 1                         " allow the use of a cache file

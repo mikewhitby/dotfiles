@@ -41,7 +41,7 @@ set sidescrolloff=2                                 " same sideways but only 2 c
 set sidescroll=1                                    " and when we do scroll sideways do it by 1 char at a time
 set nowrap                                          " disable text wrapping
 " show trailing tabs and spaces
-set list listchars=tab:>-,trail:·
+set list listchars=tab:▸▹,trail:·,eol:¶,nbsp:¬
 set hlsearch                                        " highlight search matches
 set incsearch                                       " show search as you type
 set gdefault                                        " global pattern by default

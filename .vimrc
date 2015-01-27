@@ -81,6 +81,8 @@ set autoread                                        " automatically re-read chan
 set showcmd                                         " show visual selection info as we go
 if has('gui_running')
     set guioptions=                                 " remove all menubars etc
+    set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11  " powerline patched font
+    let g:airline_powerline_fonts = 1
 endif
 " vdebug options
 let g:vdebug_options = {

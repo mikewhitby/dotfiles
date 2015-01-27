@@ -23,9 +23,6 @@ if which brew > /dev/null; then
 fi
 
 # Git autocomplete and prompt
-if [ -f ~/bin/git-completion.bash ]; then
-  . ~/bin/git-completion.bash
-fi
 if [ -f ~/bin/git-prompt.sh ]; then
     source ~/bin/git-prompt.sh
     export PS1='\h \w$(__git_ps1 " (%s)") \$ '

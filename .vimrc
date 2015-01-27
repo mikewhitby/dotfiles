@@ -10,6 +10,7 @@ Plugin 'rking/ag.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'scrooloose/nerdtree'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'joonty/vdebug'
 call vundle#end()
 filetype plugin indent on
 

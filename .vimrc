@@ -82,6 +82,12 @@ set showcmd                                         " show visual selection info
 if has('gui_running')
     set guioptions=                                 " remove all menubars etc
 endif
+" vdebug options
+let g:vdebug_options = {
+\ 'port': 9002,
+\ 'server': '0.0.0.0',
+\ 'path_maps': {'/vagrant/site': '/Users/mwhitby/Sites2/dsm/site'}
+\}
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=" "

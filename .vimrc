@@ -37,6 +37,8 @@ set laststatus=2                                    " always show the statusbar
 set wildmenu                                        " use the tab-completion wildmenu...
 set wildmode=full                                   " ...and have it show all results
 set scrolloff=10                                    " ensure 10 lines are shown above/below the current line
+set sidescrolloff=2                                 " same sideways but only 2 chars
+set sidescroll=1                                    " and when we do scroll sideways do it by 1 char at a time
 set nowrap                                          " disable text wrapping
 " show trailing tabs and spaces
 set list listchars=tab:>-,trail:·

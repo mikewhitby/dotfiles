@@ -26,8 +26,8 @@ fi
 if [ -f ~/bin/git-completion.bash ]; then
   . ~/bin/git-completion.bash
 fi
-if [ -f ~/bin/git-prompt ]; then
-    ~/bin/git-prompt.sh
+if [ -f ~/bin/git-prompt.sh ]; then
+    source ~/bin/git-prompt.sh
     export PS1='\h \w$(__git_ps1 " (%s)") \$ '
 fi
 

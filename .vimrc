@@ -73,7 +73,7 @@ autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown
 set history=1000                                    " remember the last 1000 commands
 set title                                           " make terminal vim set the title
 set visualbell                                      " don't bloody beep
-set gcr=a:blinkon0                                  " disable cusor blink
+set gcr=a:blinkon0                                  " disable cursor blink
 " show the cursor line only when in insert modedddd
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul

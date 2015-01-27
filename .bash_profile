@@ -15,7 +15,7 @@ alias vup="vagrant up"
 alias vsu="vagrant suspend"
 alias vha="vagrant halt"
 
-# Bash autocomplete
+# Brew bash autocomplete
 if which brew > /dev/null; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion

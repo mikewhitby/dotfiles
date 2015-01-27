@@ -7,7 +7,7 @@ export PATH=$PATH:~/bin
 export HISTCONTROL=ignorespace
 
 # Generic aliases
-alias ll="ls -l --color"
+alias ll="ls -lc"
 if which ggrep > /dev/null; then
     alias grep="ggrep"
 fi

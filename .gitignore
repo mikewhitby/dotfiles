@@ -1,5 +1,4 @@
 /*
-!*.gitkeep
 !/.gitignore
 !/README.md
 !/.vimrc
@@ -14,7 +13,10 @@
 !/bin/
 /bin/mvim
 !/.vendor/
+/.vendor/ngrok/*
+/.vendor/composer/*
 !/.n98-magerun/
 !/.bash_completion.d/
 !/projects/
 /projects/*
+!*.gitkeep

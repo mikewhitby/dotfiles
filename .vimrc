@@ -74,9 +74,9 @@ set history=1000                                    " remember the last 1000 com
 set title                                           " make terminal vim set the title
 set visualbell                                      " don't bloody beep
 set gcr=a:blinkon0                                  " disable cursor blink
-" show the cursor line only when in insert modedddd
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
+" show the cursor line only when in normal mode
+:autocmd InsertEnter * set nocul
+:autocmd InsertLeave * set cul
 set autoread                                        " automatically re-read changed files
 set showcmd                                         " show visual selection info as we go
 if has('gui_running')

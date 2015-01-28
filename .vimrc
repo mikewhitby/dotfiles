@@ -11,6 +11,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'scrooloose/nerdtree'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'joonty/vdebug'
+Plugin 'mkitt/tabline.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -90,15 +91,16 @@ let g:vdebug_options = {
 \ 'server': '0.0.0.0',
 \ 'path_maps': {'/vagrant/site': '/Users/mwhitby/Sites2/dsm/site'}
 \}
+let g:airline#extensions#ctrlp#show_adjacent_modes = 0 " dont shown adjacent CtrlP modes
+let g:airline#extensions#tabline#enabled = 1 " show tabline
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " use improve unique tail for tabline
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=" "
 " buffers - previous, next, close, new
-nnoremap <silent> <Leader>[ :bp<CR>
-nnoremap <silent> <Leader>] :bn<CR>
-nnoremap <silent> <Leader>c :Bclose<CR>
-nnoremap <silent> <Leader>x :Bclose!<CR>
-nnoremap <silent> <Leader>n :enew<CR>
+nnoremap <C-Tab> :bp<CR>
+nnoremap <C-S-Tab> :bn<CR>
+nnoremap <C-q> :Bclose<CR>
 " open NERDTree
 nnoremap § :NERDTreeToggle<CR>
 " disable arrow keys

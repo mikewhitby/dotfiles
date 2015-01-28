@@ -94,6 +94,7 @@ let g:vdebug_options = {
 let g:airline#extensions#ctrlp#show_adjacent_modes = 0 " dont shown adjacent CtrlP modes
 let g:airline#extensions#tabline#enabled = 1 " show tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " use improve unique tail for tabline
+let g:ctrlp_working_path_mode = 'rw' " keep cwd as ctrlp root
 
 "----------------- KEY MAPPINGS -----------------
 let mapleader=" "

@@ -4,3 +4,6 @@
 [submodule "vendor/n98-magerun"]
 	path = .vendor/n98-magerun
 	url = https://github.com/netz98/n98-magerun
+[submodule ".vendor/modman"]
+	path = .vendor/modman
+	url = https://github.com/colinmollenhour/modman

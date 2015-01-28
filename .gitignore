@@ -12,6 +12,7 @@
 !/.gitconfig
 !/.gitignore-global
 !/bin/
+/bin/mvim
 !/.vendor/
 !/.n98-magerun/
 !/.bash_completion.d/

@@ -102,7 +102,7 @@ let g:airline#extensions#tabline#enabled = 1                        " show tabli
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " use improve unique tail for tabline
 " remove the file % from airline
 function! AirlineInit()
-    let g:airline_section_z = airline#section#create([g:airline_symbols.linenr, g:airline_symbols.space, 'linenr', ':%c '])
+    let g:airline_section_z = airline#section#create(['linenr', ':%c '])
 endfunction
 autocmd VimEnter * call AirlineInit()
 

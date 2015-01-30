@@ -105,11 +105,12 @@ function! AirlineInit()
     let g:airline_section_z = airline#section#create(['linenr', ':%c '])
 endfunction
 autocmd VimEnter * call AirlineInit()
+let g:ctrlp_tjump_only_silent = 1
 
 "----------------- KEY MAPPINGS -----------------
 " buffers - previous, next, close
-nnoremap <C-Tab> :bp<CR>
-nnoremap <C-S-Tab> :bn<CR>
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
 nnoremap <C-q> :Bclose<CR>
 " open NERDTree
 nnoremap § :NERDTreeToggle<CR>

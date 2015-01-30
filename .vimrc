@@ -15,6 +15,7 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'vim-scripts/Align'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 filetype plugin indent on
 
@@ -106,6 +107,17 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 let g:ctrlp_tjump_only_silent = 1
+" tagbar php config
+let g:tagbar_type_php  = {
+\   'ctagstype' : 'php',
+\   'kinds'     : [
+\       'i:interfaces',
+\       'c:classes',
+\       'd:constant definitions',
+\       'f:functions'
+\    ]
+\}
+let g:tagbar_autofocus = 1                                          " focus tagbar on open
 
 "----------------- KEY MAPPINGS -----------------
 " buffers - previous, next, close
@@ -119,3 +131,5 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+" tagbar
+nmap ± :TagbarToggle<CR>

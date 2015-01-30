@@ -119,5 +119,3 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-" make search regex by default
-nnoremap / /\v

@@ -99,8 +99,8 @@ let g:vdebug_options = {
 \   'path_maps': {'/vagrant/site': '/Users/mwhitby/Sites2/dsm/site'}
 \}
 let g:airline#extensions#ctrlp#show_adjacent_modes = 0              " dont shown adjacent CtrlP modes (buf, mru, etc)
-let g:airline#extensions#tabline#enabled = 1                        " show tabline at the top
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " use improve unique tail for tabline
+let g:airline#extensions#tabline#enabled = 1                        " show "tabline" at the top
+let g:airline#extensions#tabline#fnamemod = ':t'                    " show only filename for the "tab" name
 " remove the file % from airline
 function! AirlineInit()
     let g:airline_section_z = airline#section#create(['linenr', ':%c '])

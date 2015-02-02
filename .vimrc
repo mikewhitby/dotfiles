@@ -87,7 +87,7 @@ set gcr=a:blinkon0                                                  " disable cu
 set autoread                                                        " automatically re-read changed files
 set showcmd                                                         " show visual selection info as we go
 if has('gui_running')
-    set guioptions=                                                 " remove all menubars etc
+    set guioptions=rb                                               " remove all menubars etc
     set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11               " powerline patched font
     let g:airline_powerline_fonts = 1                               " use powerline fonts in airline
 endif

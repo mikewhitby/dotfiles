@@ -46,7 +46,7 @@ set wildmenu wildmode=full                                          " use the ta
 set scrolloff=10 sidescrolloff=2 sidescroll=1                       " set display to show 10 lines top/bottom and 2 lines left/right
 set nowrap                                                          " disable text wrapping
 " show trailing tabs and spaces
-set list listchars=tab:▸-,trail:·,eol:¶,nbsp:¬
+set list listchars=tab:▸-,trail:·,eol:¬,nbsp:¬
 set hlsearch incsearch gdefault ignorecase smartcase                " highlight search matches, show as you type, global, smart case
 set showmatch                                                       " briefly flash to matching brace when inserted
 set autoindent smartindent                                          " indent the next line the same as the current line, and indent control structures

@@ -48,7 +48,7 @@ set sidescrolloff=2                                                 " same sidew
 set sidescroll=1                                                    " and when we do scroll sideways do it by 1 char at a time
 set nowrap                                                          " disable text wrapping
 " show trailing tabs and spaces
-set list listchars=tab:▸▹,trail:·,eol:¶,nbsp:¬
+set list listchars=tab:▸-,trail:·,eol:¶,nbsp:¬
 set hlsearch                                                        " highlight search matches
 set incsearch                                                       " show search as you type
 set gdefault                                                        " global pattern by default
@@ -82,6 +82,7 @@ set title                                                           " make termi
 set visualbell                                                      " don't bloody beep
 set gcr=a:blinkon0                                                  " disable cursor blink
 " show the cursor line and column only when in normal mode
+set cul cuc
 :autocmd InsertEnter * set nocul nocuc
 :autocmd InsertLeave * set cul cuc
 set autoread                                                        " automatically re-read changed files

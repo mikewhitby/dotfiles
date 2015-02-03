@@ -57,11 +57,8 @@ set smartcase                                                       "  ..unless 
 set showmatch                                                       " briefly flash to matching brace when inserted
 set autoindent                                                      " indent the next line the same as the current line...
 set smartindent                                                     " ...and alter the indent for control structures etc
-set expandtab                                                       " change tabs to spaces
-set tabstop=4                                                       " class this many spaces as one tab
-set shiftwidth=4                                                    " when altering indent, use this many spaces for one tab
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4                  " when I press tab, insert 4 spaces instead, do the same for indenting
 set backspace=indent,eol,start                                      " 'untab' these with backspace
-set softtabstop=4                                                   " unsure how this differs to the other tab settings tbh
 set noswapfile                                                      " disable swap file
 set nobackup                                                        " don't save backup files
 set nowb                                                            " don't save a backup before writing

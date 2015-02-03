@@ -116,6 +116,8 @@ let g:tagbar_type_php  = {
 \    ]
 \}
 let g:tagbar_autofocus = 1                                          " focus tagbar on open
+let g:tagbar_map_togglefold = ["O", "za"]
+let g:tagbar_map_jump = "o"
 
 "----------------- KEY MAPPINGS -----------------
 " buffers - previous, next, close

@@ -1,4 +1,4 @@
-" vim: nowrap fdm=marker
+" vim: tw=0 fdm=marker
 
 " vundle {{{1
 set nocompatible

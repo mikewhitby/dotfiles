@@ -18,6 +18,7 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'vim-scripts/Align'
 Plugin 'majutsushi/tagbar'
+Plugin 'gcmt/wildfire.vim'
 call vundle#end()
 filetype plugin indent on
 

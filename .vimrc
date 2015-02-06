@@ -59,6 +59,7 @@ if has('gui_running')
     set guifont=Droid\ Sans\ Mono\ for\ Powerline:h11               " powerline patched font
     let g:airline_powerline_fonts = 1                               " use powerline fonts in airline
 endif
+set completeopt=menu,longest,preview                                " only compelte to the longest common match with ctrl+n/p
 
 " autocmd {{{1
 :autocmd InsertEnter * set nocul nocuc

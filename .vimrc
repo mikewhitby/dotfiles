@@ -119,14 +119,14 @@ let g:tagbar_autofocus = 1                                          " focus tagb
 autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown
 
 " key mappings {{{1
-nnoremap <C-Tab> :bn<CR>
-nnoremap <C-S-Tab> :bp<CR>
+nmap <C-Tab> :bn<CR>
+nmap <C-S-Tab> :bp<CR>
 nmap <C-q> :Bclose<CR>
-nnoremap § :NERDTreeToggle<CR>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+nmap <Up> <NOP>
+nmap <Down> <NOP>
+nmap <Left> <NOP>
+nmap <Right> <NOP>
+nmap § :NERDTreeToggle<CR>
 nmap ± :TagbarToggle<CR>
 let g:tagbar_map_togglefold = ["O", "za"]
 let g:tagbar_map_jump = "o"

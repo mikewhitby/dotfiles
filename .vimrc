@@ -19,6 +19,7 @@ Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'vim-scripts/Align'
 Plugin 'majutsushi/tagbar'
 Plugin 'gcmt/wildfire.vim'
+Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
 filetype plugin indent on
 

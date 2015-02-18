@@ -66,6 +66,8 @@ set completeopt=menu,longest,preview                                " only compe
 :autocmd InsertEnter * set nocul nocuc
 :autocmd InsertLeave * set cul cuc
 autocmd! bufwritepost .vimrc source %
+autocmd FileType nerdtree cnoreabbrev <buffer> Bclose echo "Refusing to destroy NERDTree buffer"
+autocmd FileType tagbar cnoreabbrev <buffer> Bclose echo "Refusing to destroy tagbar buffer"
 
 " plugin config {{{1
 
@@ -119,7 +121,7 @@ autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown
 " key mappings {{{1
 nnoremap <C-Tab> :bn<CR>
 nnoremap <C-S-Tab> :bp<CR>
-nnoremap <C-q> :Bclose<CR>
+nmap <C-q> :Bclose<CR>
 nnoremap § :NERDTreeToggle<CR>
 noremap <Up> <NOP>
 noremap <Down> <NOP>

@@ -20,6 +20,7 @@ Plugin 'vim-scripts/Align'
 Plugin 'majutsushi/tagbar'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kshenoy/vim-signature'
 call vundle#end()
 filetype plugin indent on
 
@@ -100,6 +101,7 @@ endif
 let g:vdebug_options = {
 \   'port': 9002,
 \   'server': '0.0.0.0',
+\   'break_on_open' : 0,
 \   'path_maps': {'/vagrant/site': '/Users/mwhitby/Sites2/dsm/site'}
 \}
 
@@ -119,14 +121,20 @@ let g:tagbar_autofocus = 1                                          " focus tagb
 autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown
 
 " key mappings {{{1
-nmap <C-Tab> :bn<CR>
-nmap <C-S-Tab> :bp<CR>
-nmap <C-q> :Bclose<CR>
-nmap <Up> <NOP>
-nmap <Down> <NOP>
-nmap <Left> <NOP>
-nmap <Right> <NOP>
-nmap § :NERDTreeToggle<CR>
-nmap ± :TagbarToggle<CR>
+nmap     <C-Tab>   :bn<CR>
+nmap     <C-k>     :bn<CR>
+nmap     <C-S-Tab> :bp<CR>
+nmap     <C-j>     :bp<CR>
+nmap     <C-q>     :Bclose<CR>
+nnoremap <up>      <nop>
+nnoremap <down>    <nop>
+nnoremap <left>    <nop>
+nnoremap <right>   <nop>
+inoremap <up>      <nop>
+inoremap <down>    <nop>
+inoremap <left>    <nop>
+inoremap <right>   <nop>
+nmap     §         :NERDTreeToggle<CR>
+nmap     ±         :TagbarToggle<CR>
 let g:tagbar_map_togglefold = ["O", "za"]
 let g:tagbar_map_jump = "o"

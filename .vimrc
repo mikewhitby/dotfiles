@@ -17,6 +17,7 @@ Plug 'majutsushi/tagbar'
 Plug 'gcmt/wildfire.vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'kshenoy/vim-signature'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " vim settings {{{1

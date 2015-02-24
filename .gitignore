@@ -4,7 +4,7 @@
 !/.vimrc
 !/.vim/
 /.vim/.netrwhist
-/.vim/bundle/*
+/.vim/plugged/*
 /.vim/backup/*
 /.vim/undo/*
 !/.bash_profile

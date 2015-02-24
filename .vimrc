@@ -1,28 +1,23 @@
 " vim: tw=0 fdm=marker
 
 " vundle {{{1
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'scrooloose/nerdtree'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'joonty/vdebug'
-Plugin 'mkitt/tabline.vim'
-Plugin 'chrisbra/csv.vim'
-Plugin 'd11wtq/ctrlp_bdelete.vim'
-Plugin 'vim-scripts/Align'
-Plugin 'majutsushi/tagbar'
-Plugin 'gcmt/wildfire.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'kshenoy/vim-signature'
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'scrooloose/nerdtree'
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'joonty/vdebug'
+Plug 'mkitt/tabline.vim'
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
+Plug 'd11wtq/ctrlp_bdelete.vim'
+Plug 'vim-scripts/Align'
+Plug 'majutsushi/tagbar'
+Plug 'gcmt/wildfire.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'kshenoy/vim-signature'
+call plug#end()
 
 " vim settings {{{1
 set encoding=utf-8 nobomb                                           " use utf-8 encoding
@@ -116,6 +111,9 @@ let g:tagbar_type_php  = {
 \    ]
 \}
 let g:tagbar_autofocus = 1                                          " focus tagbar on open
+
+" NERDTree {{{2
+let NERDTreeShowHidden=1
 
 " file type associations {{{1
 autocmd BufNewFile,BufRead,BufWrite *.md set filetype=markdown

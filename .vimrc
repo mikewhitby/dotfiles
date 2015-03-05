@@ -69,6 +69,9 @@ autocmd FileType tagbar cnoreabbrev <buffer> Bclose echo "Refusing to destroy ta
 
 " plugin config {{{1
 
+" vimplug {{{1
+let g:plug_timeout = 120
+
 " airline {{{2
 let g:airline#extensions#ctrlp#show_adjacent_modes = 0              " dont shown adjacent CtrlP modes (buf, mru, etc)
 let g:airline#extensions#tabline#enabled = 1                        " show "tabline" at the top

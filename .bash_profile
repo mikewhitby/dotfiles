@@ -1,19 +1,8 @@
-HISTSIZE=3000
 
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=$PATH:~/bin
-
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:~/bin
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export HISTSIZE=3000
 export HISTCONTROL=ignorespace
-
-# Generic aliases
-alias ll="ls -lc"
-if which ggrep > /dev/null; then
-    alias grep="ggrep"
-fi
-alias vup="vagrant up"
-alias vsu="vagrant suspend"
-alias vha="vagrant halt"
 
 # Brew bash autocomplete
 if which brew > /dev/null; then
@@ -33,7 +22,9 @@ for file in ~/.bash_completion.d/*; do
   source $file
 done
 
-# De facto aliases
-if [ -f ~/.defacto_aliases ]; then
-    source ~/.defacto_aliases
-fi
+# Aliases
+alias ll="ls -l --color"
+alias ls="ls --color"
+alias vup="vagrant up"
+alias vsu="vagrant suspend"
+alias vha="vagrant halt"

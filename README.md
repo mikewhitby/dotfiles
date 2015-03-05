@@ -1,17 +1,32 @@
-# My home directory
+# My dotfiles
 
-# Pre-requisites
+----
 
-These aren't set up by the quick start, so manually install them first.
+⚠️ **WARNING** - You need to install xcode before doing anything
 
-- Droid Sans Mono font for Powerline - https://github.com/powerline/fonts
+----
 
-## Quick start (i.e. via SSH)
+## Post Install Tasks
 
-    brew install macvim --override-system-vim
-    brew install netcat nmap pv wget ssh-copy-id
-    git clone https://github.com/mikewhitby/home.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginInstall +qall
-    wget -qO- http://goo.gl/gOEzTh | bsdtar -xvC .vendor/ngrok -f-
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=.vendor/composer
+- Install Java SE 6 for [PHPStorm][1]
+- Add a license key to PHPStorm
+- Install [Magicento][2]
+- Install SSH keys
+- Install [Twitter][3] from the App Store
+- Disable spotlight suggestions and bing web searches
+
+## Caveats
+
+-  Macvim has no application link
+-  VirtualBox has an odd "no entry" symbol in Spotlight
+
+## To Do
+
+- Be more verbose
+- Make links relative to home dir if they are in a subdir
+- Move .vendor to vendor
+
+[1]: https://support.apple.com/kb/DL1572?locale=en_US
+[2]: http://magicento.com/
+[3]: https://itunes.apple.com/gb/app/twitter/id333903271
+

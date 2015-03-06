@@ -10,10 +10,10 @@ brew install bash
 brew install coreutils
 brew install findutils
 brew install diffutils
-brew install grep --with-default-names
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-which --with-default-names
+brew install grep
+brew install gnu-sed
+brew install gnu-tar
+brew install gnu-which
 brew install gzip
 brew install watch
 brew install wget

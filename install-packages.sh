@@ -5,12 +5,18 @@ if [ "$(ps $PPID | tail -n 1 | awk "{print \$6}")" != "bootstrap.sh" ]; then
 fi
 
 # install bash 4 and GNU core and findutils to replace outdates OSX versions
+brew tap homebrew/dupes
 brew install bash
 brew install coreutils
 brew install findutils
 brew install diffutils
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep --with-default-names
+brew install grep --with-default-names
+brew install gnu-sed --with-default-names
+brew install gnu-tar --with-default-names
+brew install gnu-which --with-default-names
+brew install gzip
+brew install watch
+brew install wget
 
 # install stuff OSX didn't come with
 brew install ack

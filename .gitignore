@@ -1,3 +1,5 @@
 .vim/plugged/*
 .vim/undo/*
+.vim/.netrwhist
 .vendor/*
+!.vendor/DroidSansMonoPowerline

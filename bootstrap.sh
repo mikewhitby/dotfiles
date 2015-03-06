@@ -21,4 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 sh $path/install-packages.sh
 
+# copy font for vim
+cp $path/.vendor/DroidSansMonoPowerline/Droid\ Sans\ Mono\ for\ Powerline.otf ~/Library/Fonts/
+
 echo "Done! Read README.md to see what else you need to do"

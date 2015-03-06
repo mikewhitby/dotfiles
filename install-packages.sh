@@ -8,6 +8,7 @@ fi
 brew install bash
 brew install coreutils
 brew install findutils
+brew install diffutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep --with-default-names
 

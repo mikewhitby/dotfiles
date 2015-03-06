@@ -1,12 +1,13 @@
-# get path to script
+# get relative path for symlinks
 path=$(dirname "$(readlink -f "$0")")
+relpath=$(python -c "import os.path; print os.path.relpath('$path', '$(echo ~)')")
 
 # make links
-ln -sf $path/.bash_profile ~
-ln -sf $path/.bash_completion.d ~
-ln -sf $path/.gitconfig ~
-ln -sf $path/.gitignore-global ~
-ln -sf $path/.n98-magerun ~
-ln -sf $path/.vim ~
-ln -sf $path/.vimrc ~
-ln -sf $path/bin ~
+ln -sf $relpath/.bash_profile ~
+ln -sf $relpath/.bash_completion.d ~
+ln -sf $relpath/.gitconfig ~
+ln -sf $relpath/.gitignore-global ~
+ln -sf $relpath/.n98-magerun ~
+ln -sf $relpath/.vim ~
+ln -sf $relpath/.vimrc ~
+ln -sf $relpath/bin ~

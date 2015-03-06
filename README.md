@@ -9,11 +9,10 @@
 ## Post Install Tasks
 
 - Install Java SE 6 for [PHPStorm][1]
-- Add a license key to PHPStorm
 - Install [Magicento][2]
-- Install SSH keys
+- Copy SSH keys
 - Install [Twitter][3] from the App Store
-- Disable spotlight suggestions and bing web searches
+- [Disable][4] Spotlight suggestions and Bing web searches
 
 ## Caveats
 
@@ -29,4 +28,4 @@
 [1]: https://support.apple.com/kb/DL1572?locale=en_US
 [2]: http://magicento.com/
 [3]: https://itunes.apple.com/gb/app/twitter/id333903271
-
+[4]: https://fix-macosx.com/

@@ -21,8 +21,6 @@
 
 ## To Do
 
-- Be more verbose
-- Make links relative to home dir if they are in a subdir
 - Move .vendor to vendor
 
 [1]: https://support.apple.com/kb/DL1572?locale=en_US

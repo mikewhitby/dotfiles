@@ -44,6 +44,10 @@ brew cask install vagrant
 brew cask install phpstorm
 brew cask install cyberduck
 brew cask install libreoffice
+brew cask install libreoffice
+
+# vagrant plugins
+vagrant plugin install vagrant-bindfs
 
 # cleanup
 brew cleanup

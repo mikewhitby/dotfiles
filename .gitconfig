@@ -4,6 +4,7 @@
 [core]
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore-global
+    autocrlf = input
 [alias]
     st = status
     co = checkout

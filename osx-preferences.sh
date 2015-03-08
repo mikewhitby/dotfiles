@@ -59,3 +59,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -int 0
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+# prefer showing an untitled file rather than open panel (this affects textedit)
+defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false

@@ -19,9 +19,6 @@
 -  Macvim has no application link
 -  VirtualBox has an odd "no entry" symbol in Spotlight
 
-## To Do
-
-- Move .vendor to vendor
 
 [1]: https://support.apple.com/kb/DL1572?locale=en_US
 [2]: http://magicento.com/

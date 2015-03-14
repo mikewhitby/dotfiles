@@ -12,6 +12,7 @@
 - Install [Magicento][2]
 - Copy SSH keys
 - Install [Twitter][3] from the App Store
+- Install [Monosnap][5] from the App Store
 - [Disable][4] Spotlight suggestions and Bing web searches
 
 ## Caveats
@@ -24,3 +25,4 @@
 [2]: http://magicento.com/
 [3]: https://itunes.apple.com/gb/app/twitter/id333903271
 [4]: https://fix-macosx.com/
+[5]: https://itunes.apple.com/gb/app/monosnap/id540348655

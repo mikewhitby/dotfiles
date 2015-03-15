@@ -45,6 +45,7 @@ brew cask install phpstorm
 brew cask install cyberduck
 brew cask install libreoffice
 brew cask install ansible
+brew cask install transmission
 
 # vagrant plugins
 vagrant plugin install vagrant-bindfs

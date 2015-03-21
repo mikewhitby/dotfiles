@@ -46,6 +46,7 @@ brew cask install cyberduck
 brew cask install libreoffice
 brew cask install ansible
 brew cask install transmission
+brew cask install skype
 
 # vagrant plugins
 vagrant plugin install vagrant-bindfs
